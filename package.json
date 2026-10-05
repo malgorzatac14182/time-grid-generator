@@ -1,0 +1,17 @@
+{
+  "name": "time-grid-generator",
+  "version": "0.1.0",
+  "description": "Generates an array of evenly spaced time slots between two datetimes at a specified interval, supporting exclusion of defined break windows.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {}
+}
