@@ -42,3 +42,10 @@ Boundaries. The rules, stated once:
 - If `end <= start`, the function throws a `RangeError` rather than returning an empty array, because that is almost always a caller bug.
 
 All arithmetic is integer-millisecond based, so there is no float drift across the safe-integer range.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
